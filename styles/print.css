@@ -1,0 +1,29 @@
+@media print {
+  html, body {
+    overflow: visible;
+    height: auto;
+  }
+
+  main {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+
+  /* Each slide becomes its own printed page via JS */
+  @page {
+    size: 297mm 167mm landscape;
+    margin: 0;
+  }
+
+  /* Hide UI elements */
+  .fixed {
+    display: none !important;
+  }
+
+  /* Remove animations */
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
